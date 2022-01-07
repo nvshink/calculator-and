@@ -50,5 +50,5 @@
     <style name="Widget.MyApp.TextView" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="android:textColor">?attr/colorPrimaryVariant</item>
         <item name="backgroundTint">?attr/colorOnPrimary</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">36sp</item>
     </style></resources>
