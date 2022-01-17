@@ -19,73 +19,302 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TableLayout
+    <androidx.gridlayout.widget.GridLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:columnCount="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outText"
+        app:rowCount="5">
+
+        <Button
+            android:id="@+id/clearButton"
+            style="@style/Widget.MyApp.Button.PrimaryButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onClear"
+            android:text="C"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="0"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/divideButton"
+            style="@style/Widget.MyApp.Button.PrimaryButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onOperator"
+            android:text="÷"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="0"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/multiplicationButton"
+            style="@style/Widget.MyApp.Button.PrimaryButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onOperator"
+            android:text="×"
+            app:layout_column="2"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="0"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            style="@style/Widget.MyApp.Button.PrimaryButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:onClick="onDelete"
+            app:icon="@drawable/ic_backspace"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:layout_column="3"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="0"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/sevenButton"
+            style="@style/Widget.MyApp.Button.OnPrimaryButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onNumber"
+            android:text="7"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="1"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/eightButton"
+            style="@style/Widget.MyApp.Button.OnPrimaryButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onNumber"
+            android:text="8"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="1"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/nineButton"
+            style="@style/Widget.MyApp.Button.OnPrimaryButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onNumber"
+            android:text="9"
+            app:layout_column="2"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="1"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/minusButton"
+            style="@style/Widget.MyApp.Button.PrimaryButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onOperator"
+            android:text="–"
+            app:layout_column="3"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="1"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/fourButton"
+            style="@style/Widget.MyApp.Button.OnPrimaryButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="25"
+            android:onClick="onNumber"
+            android:text="4"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="2"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/fiveButton"
+            style="@style/Widget.MyApp.Button.OnPrimaryButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="25"
+            android:onClick="onNumber"
+            android:text="5"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="2"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/sixButton"
+            style="@style/Widget.MyApp.Button.OnPrimaryButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="25"
+            android:onClick="onNumber"
+            android:text="6"
+            app:layout_column="2"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="2"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/plusButton"
+            style="@style/Widget.MyApp.Button.PrimaryButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="25"
+            android:onClick="onOperator"
+            android:text="+"
+            app:layout_column="3"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="2"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/oneButton"
+            style="@style/Widget.MyApp.Button.OnPrimaryButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="33"
+            android:onClick="onNumber"
+            android:text="1"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="3"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/twoButton"
+            style="@style/Widget.MyApp.Button.OnPrimaryButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="33"
+            android:onClick="onNumber"
+            android:text="2"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="3"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/threeButton"
+            style="@style/Widget.MyApp.Button.OnPrimaryButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="33"
+            android:onClick="onNumber"
+            android:text="3"
+            app:layout_column="2"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="3"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/resultButton"
+            style="@style/Widget.MyApp.Button.PrimaryVariantButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onResult"
+            android:text="="
+            app:layout_column="3"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="3"
+            app:layout_rowSpan="2"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/percentButton"
+            style="@style/Widget.MyApp.Button.OnPrimaryButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="%"
+            android:visibility="visible"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="4"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/zeroButton"
+            style="@style/Widget.MyApp.Button.OnPrimaryButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onNumber"
+            android:text="0"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="4"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/pointButton"
+            style="@style/Widget.MyApp.Button.OnPrimaryButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onPoint"
+            android:text="."
+            app:layout_column="2"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="4"
+            app:layout_rowWeight="1" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:gravity="bottom|center_vertical"
         android:orientation="vertical"
         android:stretchColumns="0, 1, 2, 3"
+        android:visibility="gone"
         android:weightSum="100"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_max="440dp"
         app:layout_constraintHeight_min="200dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outText"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="20">
-
-            <Button
-                android:id="@+id/clearButton"
-                style="@style/Widget.MyApp.Button.PrimaryButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_column="0"
-                android:layout_weight="25"
-                android:onClick="onClear"
-                android:text="C" />
-
-            <Button
-                android:id="@+id/divideButton"
-                style="@style/Widget.MyApp.Button.PrimaryButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_column="1"
-                android:layout_weight="25"
-                android:onClick="onOperator"
-                android:text="÷" />
-
-            <Button
-                android:id="@+id/multiplicationButton"
-                style="@style/Widget.MyApp.Button.PrimaryButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_column="2"
-                android:layout_weight="25"
-                android:onClick="onOperator"
-                android:text="×" />
-
-            <Button
-                android:id="@+id/deleteButton"
-                style="@style/Widget.MyApp.Button.PrimaryButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_column="3"
-                android:layout_weight="25"
-                android:gravity="center"
-                android:onClick="onDelete"
-                app:icon="@drawable/ic_backspace"
-                app:iconGravity="textStart"
-                app:iconPadding="0dp" />
 
         </TableRow>
 
@@ -94,91 +323,12 @@
             android:layout_height="match_parent"
             android:layout_weight="20">
 
-            <Button
-                android:id="@+id/sevenButton"
-                style="@style/Widget.MyApp.Button.OnPrimaryButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_column="0"
-                android:layout_weight="25"
-                android:onClick="onNumber"
-                android:text="7" />
-
-            <Button
-                android:id="@+id/eightButton"
-                style="@style/Widget.MyApp.Button.OnPrimaryButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_column="1"
-                android:layout_weight="25"
-                android:onClick="onNumber"
-                android:text="8" />
-
-            <Button
-                android:id="@+id/nineButton"
-                style="@style/Widget.MyApp.Button.OnPrimaryButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_column="2"
-                android:layout_weight="25"
-                android:onClick="onNumber"
-                android:text="9" />
-
-            <Button
-                android:id="@+id/minusButton"
-                style="@style/Widget.MyApp.Button.PrimaryButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_column="3"
-                android:layout_weight="25"
-                android:onClick="onOperator"
-                android:text="–" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="20">
-
-            <Button
-                android:id="@+id/fourButton"
-                style="@style/Widget.MyApp.Button.OnPrimaryButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_column="0"
-                android:layout_weight="25"
-                android:onClick="onNumber"
-                android:text="4" />
-
-            <Button
-                android:id="@+id/fiveButton"
-                style="@style/Widget.MyApp.Button.OnPrimaryButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_column="1"
-                android:layout_weight="25"
-                android:onClick="onNumber"
-                android:text="5" />
-
-            <Button
-                android:id="@+id/sixButton"
-                style="@style/Widget.MyApp.Button.OnPrimaryButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_column="2"
-                android:layout_weight="25"
-                android:onClick="onNumber"
-                android:text="6" />
-
-            <Button
-                android:id="@+id/plusButton"
-                style="@style/Widget.MyApp.Button.PrimaryButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_column="3"
-                android:layout_weight="25"
-                android:onClick="onOperator"
-                android:text="+" />
 
         </TableRow>
 
@@ -201,36 +351,6 @@
                     android:layout_weight="50"
                     android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/oneButton"
-                        style="@style/Widget.MyApp.Button.OnPrimaryButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_column="0"
-                        android:layout_weight="33"
-                        android:onClick="onNumber"
-                        android:text="1" />
-
-                    <Button
-                        android:id="@+id/twoButton"
-                        style="@style/Widget.MyApp.Button.OnPrimaryButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_column="1"
-                        android:layout_weight="33"
-                        android:onClick="onNumber"
-                        android:text="2" />
-
-                    <Button
-                        android:id="@+id/threeButton"
-                        style="@style/Widget.MyApp.Button.OnPrimaryButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_column="2"
-                        android:layout_weight="33"
-                        android:onClick="onNumber"
-                        android:text="3" />
-
                 </TableRow>
 
                 <TableRow
@@ -238,52 +358,9 @@
                     android:layout_height="match_parent"
                     android:layout_weight="50">
 
-                    <Button
-                        android:id="@+id/percentButton"
-                        style="@style/Widget.MyApp.Button.OnPrimaryButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_column="0"
-                        android:layout_margin="0dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginBottom="20dp"
-                        android:layout_weight="33"
-                        android:text="%"
-                        android:visibility="invisible" />
-
-                    <Button
-                        android:id="@+id/zeroButton"
-                        style="@style/Widget.MyApp.Button.OnPrimaryButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_column="1"
-                        android:layout_weight="33"
-                        android:onClick="onNumber"
-                        android:text="0" />
-
-                    <Button
-                        android:id="@+id/pointButton"
-                        style="@style/Widget.MyApp.Button.OnPrimaryButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_column="2"
-                        android:layout_weight="33"
-                        android:onClick="onPoint"
-                        android:text="." />
-
                 </TableRow>
 
             </TableLayout>
-
-            <Button
-                android:id="@+id/resultButton"
-                style="@style/Widget.MyApp.Button.PrimaryVariantButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_column="3"
-                android:layout_weight="25"
-                android:onClick="onResult"
-                android:text="=" />
 
         </TableRow>
     </TableLayout>
