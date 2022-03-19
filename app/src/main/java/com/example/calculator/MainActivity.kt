@@ -19,10 +19,10 @@ class MainActivity : AppCompatActivity() {
     var expressionValuePriority: MutableList<Byte> = mutableListOf()
     lateinit var outText: TextInputEditText
     override fun onCreate(savedInstanceState: Bundle?) {
-
         setTheme(R.style.Theme_Calculator)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         supportActionBar!!.title = ""
         supportActionBar!!.setElevation(0F)
         outText = findViewById(R.id.outText)
